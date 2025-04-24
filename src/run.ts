@@ -72,20 +72,20 @@ async function runBreaking(): Promise<null | Error> {
       message: "an against was not provided",
     };
   }
-  const username = core.getInput("buf_input_https_username");
-  if (username === "") {
-    return {
-      message: "buf_input_https_username not provided",
-    };
-  }
-  process.env[bufInputHTTPSUsername] = username;
-  const password = core.getInput("buf_input_https_password");
-  if (password === "") {
-    return {
-      message: "buf_input_https_password not provided",
-    };
-  }
-  process.env[bufInputHTTPSPassword] = password;
+  // const username = core.getInput("buf_input_https_username");
+  // if (username === "") {
+  //   return {
+  //     message: "buf_input_https_username not provided",
+  //   };
+  // }
+  // process.env[bufInputHTTPSUsername] = username;
+  // const password = core.getInput("buf_input_https_password");
+  // if (password === "") {
+  //   return {
+  //     message: "buf_input_https_password not provided",
+  //   };
+  // }
+  // process.env[bufInputHTTPSPassword] = password;
   const binaryPath = await io.which("buf", true);
   if (binaryPath === "") {
     return {
